@@ -156,7 +156,7 @@ jobs:
           local_bin="$HOME/.local/bin"
           export PATH="$local_bin:$PATH"
           file "$local_bin/dune"
-          ldd "$local_bin/dune"
+          ldd "$local_bin/dune" || true
           which dune
           cd binary-distribution/test
           dune --version
